@@ -1,0 +1,27 @@
+import React from 'react';
+import Navbar from './components/navbar';
+import { NavLink } from 'react-router-dom';
+import About from './components/About';
+import Skills from './components/skills';
+import Projects from './components/Projects';
+import Education from './components/Education';
+
+function App() {
+  return (
+    <div className=' scroll-smooth w-screen text-stone-300 antialiased'>
+      <div className='fixed inset-0 -z-10'>
+      <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div className=' flex flex-col bg-red-700 scroll-smooth overflow-visible  container min-h-screen  lg:w-10/12   sm:w-full mx-auto  '>
+        <Navbar/>
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Education/>
+      </div>
+    </div>
+    
+  );
+}
+
+export default App;

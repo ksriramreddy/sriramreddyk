@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+    }
+   .view{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    gap: 200px;
+    padding: 10px;
+   }
+   .block{
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    background: #000;
+    animation: move 5s forwards;
+    animation-timeline: view();
+    animation-range: entry -10;
+   }
+   @keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+   }
+</style>
+<body>
+    <div class="view">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</body>
+</html>
