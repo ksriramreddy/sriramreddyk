@@ -12,9 +12,9 @@ function About() {
           words={['Developer','Designer','Problem Solver']}
           loop={true}/> */}
   return (
-    <div id='about' className='  flex items-start mt-28  mb-20  justify-around overflow-hidden  flex-col md:flex-row-reverse '>
-      <div className='  -ml-5 lg:w-1/2 lg:-ml-20 '>
-        <img className='image drop-shadow-2xl w-full'  src="src/assets/anime.png"  alt="" />
+    <div id='about' className='  flex items-start md:mt-56 mt-24  p-2  justify-around overflow-hidden  flex-col md:flex-row-reverse '>
+      <div className='  -ml-5 lg:w-1/2  w-full h-56 md:h-auto lg:-ml-20  flex items-center justify-center '>
+        <img className='image drop-shadow-2xl w-1/2 md:w-10/12' width={'100px'} height={'100px'}  src="src/assets/anime.png"  alt="" />
       </div>
       <div className='w-full font-mono pb-10'>
         <div className='w-full flex gap-4 flex-col md:text-left text-center'>
@@ -41,12 +41,12 @@ function About() {
             </div> */}
           </div>
         </div>
-        <div className='lg:w-2/3 text-lg my-5 text-ellipsis'>
+        <div className='lg:w-2/3 text-lg my-5 text-ellipsis flex flex-col items-center justify-center w-full md:text-left text-center'>
           <h4 className='text-zinc-300 text-xl'>
           I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.
           </h4>
         </div>
-        <div className='mt-16'>
+        <div className='mt-16 flex md:block items-center justify-center'>
           <a href="src/assets/sriramreddy.pdf" className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download={true}> Get Resume</a>
         </div>
       </div>

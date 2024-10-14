@@ -83,7 +83,7 @@ export const education = [
         field : "Electronics and Communication Engineering - ( Communication Networks)",
         year : "2018-2022",
         gpa : "8.3 CGPA",
-        description : "I have completed my bachelor's degree in Electronics and Communication Engineering (ECE) with a specialization in Communication Networks at GIOE. My academic background has provided me with a strong understanding of communication systems, networking technologies, and hands-on experience in web development and data analysis.",
+        description : "I have completed my bachelor's degree in Electronics and Communication Engineering (ECE) with a specialization in Communication Networks at GIOE. ",
         image : insta1,
     },
     {
@@ -95,4 +95,11 @@ export const education = [
         description : "I have completed my schooling in SSC (X) at Orbit-e-Techno School with the grade of 9.5 CGPA",
         image : insta1,
     }
+]
+
+const skills = [
+    ['HTML', 'CSS', 'JavaScript', 'React.Js','Tailwind','Bootstrap','Redux','ChakraUi'],
+    ['JavaScript', 'Node.js', 'exports.js','Mongo','SQL','API','Firebase','Appwrite'],
+    ['c','c++','JavaScript', 'Python','Java','MySQL'],
+    ['Git','GitHub' ,'VS Code','Figma','Canva']
 ]

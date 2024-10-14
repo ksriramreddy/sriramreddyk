@@ -13,15 +13,15 @@ const Projects = () => {
     };
     
   return (
-    <div id='projects' className='  flex flex-col mt-10 gap-10 items-center h-screen w-full bg-black'>
-        <div className=' text-4xl mt-10 font-mono'>
+    <div id='projects' className='  flex flex-col  gap-10 justify-center items-center h-screen w-full '>
+        <div className=' text-4xl  font-mono'>
             <h1 className='  w-44 text-center  mx-auto'>My <span className='border-b-4 border border-l-transparent border-t-transparent border-r-transparent border-b-green-500'>Works</span></h1>
         </div>
-        <div className='  pl-2 pr-2 flex flex-row items-center gap-3 justify-center md:justify-between bg-white  w-full   ' >
-            <div className='text-center flex bg-black justify-center mt-10 '>
+        <div className='  pl-2 pr-2  text gap-5  mx-auto w-full   ' >
+            <div className='text-center    '>
                 <button onClick={()=>{handleScroll(-275)}} className=' text-green-500 text-4xl'><FaAngleDoubleLeft/></button>
-            </div>
-            <div  ref={containerRef} className='flex  project-scrollbar pb-5 pt-8 pl-2 bg-slate-400 width900 scroll-smooth mx-auto overflow overflow-x-scroll  flex-row  gap-3'>
+            </div>  
+            <div  ref={containerRef} className='flex   project-scrollbar pb-5 pt-8 pl-2  width900 scroll-smooth'>
                 <div className='flex   flex-row gap-7 width1800 z-50'>
                     {
                         data.map((project, i)=>
@@ -30,7 +30,7 @@ const Projects = () => {
                     }
                 </div>
             </div>
-            <div className='text-center flex gap-10 justify-center mt-10'>
+            <div className='text-center  '>
                 <button onClick={()=>{handleScroll(275)}} className=' text-green-500 text-4xl'><FaAngleDoubleRight/></button>
             </div>
         </div>

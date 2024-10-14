@@ -11,7 +11,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   }
   return (
-    <nav className=' scroll-smooth flex items-center justify-between p-3 md:gap-3 '>
+    <nav className=' scroll-smooth flex items-center justify-between h-24 fixed navbar    w-10/12 p-3 md:gap-3 '>
         <div className=' flex flex-shrink items-center '>
           
             <a href="/" aria-label='HOME'>
