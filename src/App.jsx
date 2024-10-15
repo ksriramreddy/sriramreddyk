@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About'
-import Skills from './components/skills';
+import Skills from './components/Skills';
 import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
