@@ -41,7 +41,10 @@ const Navbar = () => {
             <CiMenuFries/>
           </button>
            <div className={`${isOpen?" dropdown-menu-hide ":" dropdown-menu-show"}  transition-all duration-700`}>
-            <Sidebar/>
+            
+            <div>
+              <Sidebar/>
+            </div>
           </div>
         </div>
           

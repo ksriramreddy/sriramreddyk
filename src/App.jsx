@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar from './components/navbar';
+
 import { NavLink } from 'react-router-dom';
 import About from './components/About';
 import Skills from './components/skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import Navbar from './components/Navbar';
 
 function App() {
   return (

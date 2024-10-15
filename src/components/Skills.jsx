@@ -10,15 +10,20 @@ import { SiApifox, SiAppwrite, SiCanva, SiChakraui, SiExpress, SiFirebase, SiMon
 import { TbApi, TbHexagonLetterCFilled } from 'react-icons/tb';
 import { VscVscode } from 'react-icons/vsc';
 
+// import '../../tilt.js'
+import VanillaTilt from 'vanilla-tilt';
+
 const Skills = () => {
+
   return (
     <div id='skill' className=' w-full  px-10 mb-10  '>
       <div className='text-4xl  font-bold text-center mb-10'>
         <h1 className='text-white'><span className=' border border-b-4 border-r-transparent border-l-transparent border-t-transparent border-b-green-500'>Skill</span> - Set</h1>
       </div>
+      
       <div className=' overflow-hidden'>
         <div className='  flex flex-row flex-wrap gap-10 pt-12 justify-center items-center'>
-          <div className='flex    md:mt-0   flex-wrap max-w-96 border-1  flex-col     '>
+          <div id='tilt' className='flex tilt    md:mt-0   flex-wrap max-w-96 border-1  flex-col     '>
             <div className='boxbg rounded-xl flex flex-col gap-4 hovereffect p-5'>
               <div className='text-center text-3xl font-bold'>
                 <h1 >Frontend</h1>
@@ -140,7 +145,7 @@ const Skills = () => {
           <div className='flex   md:mt-0  flex-wrap max-w-96 border-1  flex-col gap-5     '>
           <div className='boxbg rounded-xl flex flex-col gap-4 hovereffect p-5'>
             <div className='text-center text-3xl font-bold '>
-              <h1 >Frontend</h1>
+              <h1 >Others</h1>
             </div>
             <div className='flex flex-wrap gap-2 items-center justify-center'>
             <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
