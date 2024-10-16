@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Link,NavLink} from 'react-router-dom'
-import raviKumarLogo from '../assets/sriramLogo.png';
 import { CiMenuFries } from "react-icons/ci";
 import Sidebar from './Sidebar';
 
@@ -43,7 +42,7 @@ const Navbar = () => {
            <div className={`${isOpen?" dropdown-menu-hide ":" dropdown-menu-show"}  transition-all duration-700`}>
             
             <div>
-              <Sidebar/>
+              <Sidebar setIsOpen={setIsOpen}/>
             </div>
           </div>
         </div>
