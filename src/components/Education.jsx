@@ -9,7 +9,7 @@ const Education = () => {
       <div className='w-full text-center  mb-10 text-4xl text-white title'>
         <h1>Education</h1>
       </div>
-      <div className='w-full bg-red-300  rounded-3xl edu-line relative h-full'>
+      <div className='w-full rounded-3xl edu-line relative h-full'>
         
         <div>
           <img className='clg-logo cmr' src="src/assets/schoolimages/cmr.png" alt="" />
