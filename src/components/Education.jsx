@@ -38,7 +38,7 @@ const Education = () => {
         <div className=' p-5  edu-gioe border edu  righttoleft boxbg rounded-2xl m-3 flex flex-col gap-2'>
           <div className='flex gap-2'>
             <div>
-              <img className='w-20' src="src/assets/schoolimages/cmr.png" alt="" />
+              <img className='w-20' src="src/assets/schoolimages/gioe.jpg" alt="" />
             </div>
             <div className='flex flex-col'>
               <h1 className='text-xl'>{data[1].institution}</h1>
@@ -53,7 +53,7 @@ const Education = () => {
         <div className=' p-5 border edu-orbit edu lefttoright boxbg rounded-2xl m-3 flex flex-col gap-2'>
           <div className='flex gap-2'>
             <div>
-              <img className='w-20' src="src/assets/schoolimages/cmr.png" alt="" />
+              <img className='w-20' src="src/assets/schoolimages/orbit.png" alt="" />
             </div>
             <div className='flex flex-col'>
               <h1 className='text-xl'>{data[2].institution}</h1>
@@ -63,7 +63,7 @@ const Education = () => {
             </div>
           </div>
           <div className='text-sm font-bold text-slate-400'> Grade : {data[2].gpa}</div>
-          <div className='textstyle  '>{data[2].description }</div>
+          <div className='textstyle'>{data[2].description }</div>
         </div>
       </div>
     </div>

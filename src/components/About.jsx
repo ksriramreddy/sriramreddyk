@@ -1,6 +1,6 @@
 import React from 'react';
 import {Typewriter,Cursor} from 'react-simple-typewriter'
-
+import sriramreddy from '../assets/ksriramreddy.pdf'
 function About() {
   // const {text} = useTypewriter({
   //   words:['Developer','Designer','Problem Solver'],
@@ -47,7 +47,7 @@ function About() {
           </h4>
         </div>
         <div className='mt-16 flex md:block items-center justify-center'>
-          <a href="src/assets/sriramreddy.pdf" className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download={true}> Get Resume</a>
+          <a href={sriramreddy} className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download> Get Resume</a>
         </div>
       </div>
     </div>
