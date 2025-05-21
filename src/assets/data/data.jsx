@@ -10,7 +10,7 @@ import discard1 from '../projectimages/discard/discard1.png'
 export const projects = [
     {
         title : "ECHO-AI Chat Application",
-        image :"src/assets/projectimages/g0UVg91644.png" ,
+        image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747813896/rk1vd8ma2ivppcqjc62x.png" ,
         description : "A MERN Stack project with seamless live chat with personal AI assitance feature.",
         technologies : ["React", "Redux", "Firebase","Java Script","Chakra UI"],
         code : "https://github.com/ksriramreddy/ECHO.git",
