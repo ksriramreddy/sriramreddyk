@@ -14,7 +14,7 @@ function About() {
   return (
     <div id='about' className='  flex items-start md:mt-56 mt-24  p-2  justify-around overflow-hidden  flex-col md:flex-row-reverse '>
       <div className='  -ml-5 lg:w-1/2  w-full h-56 md:h-auto lg:-ml-20  flex items-center justify-center '>
-        <img className='mage drop-shadow-2l w-1/2 md:w-10/12' width={'100px'} height={'100px'}  src="src/assets/icons/srirambgwhite.png"  alt="" />
+        <img className='mage drop-shadow-2l w-1/2 md:w-10/12' width={'100px'} height={'100px'}  src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747812551/z5sgeksgzr2prkz2o3xs.png"  alt="" />
       </div>
       <div className='w-full font-mono pb-10'>
         <div className='w-full flex gap-4 flex-col md:text-left text-center'>
@@ -25,7 +25,7 @@ function About() {
             {/* <Cursor cursorStyle='{' cursorBlinking={false}/>  */}
             <span className='text-green-500'>
 
-            <Typewriter words={['Developer','Designer','Problem Solver']} loop={true}/>
+            <Typewriter words={['Developer','Problem Solver',"Full Stack Developer"]} loop={true}/>
             </span>
               <Cursor/>
               {/* <Cursor cursorStyle='}' cursorBlinking={false}/>  */}

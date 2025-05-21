@@ -9,10 +9,18 @@ import discard1 from '../projectimages/discard/discard1.png'
 
 export const projects = [
     {
+        title : "ECHO-AI Chat Application",
+        image :"src/assets/projectimages/g0UVg91644.png" ,
+        description : "A MERN Stack project with seamless live chat with personal AI assitance feature.",
+        technologies : ["React", "Redux", "Firebase","Java Script","Chakra UI"],
+        code : "https://github.com/ksriramreddy/ECHO.git",
+        demo : "https://echo-vvm8.onrender.com"
+    },
+    {
         title : "Instagram clone",
         image : insta1,
         description : "An Instagram clone built with React, Redux, and Firebase. Users can create, like, and comment on posts.",
-        technologies : ["React", "Redux", "Firebase","Java Script","Chakra UI"],
+        technologies : ["ReactJs", "Nodejs", "ExpressJs","Mongodb","Socket.io","JWT"],
         code : "https://github.com/ksriramreddy/instagram-clone.git",
         demo : "https://instagram-clone-sandy.vercel.app/"
     },
