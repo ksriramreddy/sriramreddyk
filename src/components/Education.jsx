@@ -12,18 +12,18 @@ const Education = () => {
       <div className='w-full rounded-3xl edu-line relative h-full'>
         
         <div>
-          <img className='clg-logo cmr' src="src/assets/schoolimages/cmr.png" alt="" />
+          <img className='clg-logo cmr' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811992/tb7xsgrlc0mm7odwpmwn.png" alt="" />
         </div>  
         <div>
-          <img className='clg-logo gioe' src="src/assets/schoolimages/gioe.jpg" alt="" />
+          <img className='clg-logo gioe' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811984/zwdvvtnf1hzblehsa6kb.jpg" alt="" />
         </div>
         <div>
-          <img className='clg-logo orbit' src="src/assets/schoolimages/orbit.png" alt="" />
+          <img className='clg-logo orbit' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811975/hj6bgdegicpvjgucqkum.webp" alt="" />
         </div>
         <div className=' p-5 border  edu edu-cmr lefttoright boxbg rounded-2xl   flex flex-col gap-2'>
           <div className='flex gap-2'>
             <div>
-              <img className='w-20' src="src/assets/schoolimages/cmr.png" alt="" />
+              <img className='w-20' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811992/tb7xsgrlc0mm7odwpmwn.png" alt="" />
             </div>
             <div className='flex flex-col'>
               <h1 className='text-xl'>{data[0].institution}</h1>
@@ -38,7 +38,7 @@ const Education = () => {
         <div className=' p-5  edu-gioe border edu  righttoleft boxbg rounded-2xl m-3 flex flex-col gap-2'>
           <div className='flex gap-2'>
             <div>
-              <img className='w-20' src="src/assets/schoolimages/gioe.jpg" alt="" />
+              <img className='w-20' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811984/zwdvvtnf1hzblehsa6kb.jpg" alt="" />
             </div>
             <div className='flex flex-col'>
               <h1 className='text-xl'>{data[1].institution}</h1>
@@ -53,7 +53,7 @@ const Education = () => {
         <div className=' p-5 border edu-orbit edu lefttoright boxbg rounded-2xl m-3 flex flex-col gap-2'>
           <div className='flex gap-2'>
             <div>
-              <img className='w-20' src="src/assets/schoolimages/orbit.png" alt="" />
+              <img className='w-20' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811975/hj6bgdegicpvjgucqkum.webp" alt="" />
             </div>
             <div className='flex flex-col'>
               <h1 className='text-xl'>{data[2].institution}</h1>

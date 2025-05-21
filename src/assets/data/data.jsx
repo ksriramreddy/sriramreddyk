@@ -75,7 +75,7 @@ export const education = [
         year : "2022 - 2025",
         gpa : "8.2 CGPA",
         description : "I am currently pursuing a bachelor's degree in Computer Science and Engineering with a specialization in Data Science at CMR Technical Campus. My studies have provided a solid foundation in data structures, algorithms, and data analysis, alongside hands-on experience in web development and database management.",
-        image : insta1,
+        image : "https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811975/hj6bgdegicpvjgucqkum.webp",
     },
     {
         institution : "Govenment Institute of Electronics",
