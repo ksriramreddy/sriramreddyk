@@ -7,7 +7,7 @@ import { IoLogoJavascript } from 'react-icons/io';
 import { IoLogoFigma, IoLogoReact } from 'react-icons/io5';
 import { PiMicrosoftPowerpointLogo, PiMicrosoftPowerpointLogoFill } from 'react-icons/pi';
 import { SiApifox, SiAppwrite, SiCanva, SiChakraui, SiExpress, SiFirebase, SiMongodb, SiMysql, SiRedux, SiSqlite } from 'react-icons/si';
-import { TbApi, TbHexagonLetterCFilled } from 'react-icons/tb';
+import { TbApi, TbBrandSocketIo, TbHexagonLetterCFilled } from 'react-icons/tb';
 import { VscVscode } from 'react-icons/vsc';
 
 
@@ -88,6 +88,10 @@ const Skills = () => {
                 <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
                   <span className='text-violet-600'><FaDatabase /></span>
                   <h4 className=' '>SQL</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-white'><TbBrandSocketIo /></span>
+                  <h4 className=' '>Socket.io</h4>
                 </div>
                 <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
                   <span className='text-violet-700'><TbApi /></span>

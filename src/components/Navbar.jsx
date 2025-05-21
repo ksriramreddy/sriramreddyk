@@ -21,7 +21,7 @@ const Navbar = () => {
                 <span className='text-green-600 font-bold select-none text-4xl' id='closeb'>{closeb}</span>
                  */}
                  
-                 <img className=' ' src="src/assets/Sriram-removebg-preview.png" alt="" width={250} />
+                 <img className=' ' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747808738/ef8ltsvirvtca7atjq6m.png" alt="" width={250} />
             </a>
             
         </div>
