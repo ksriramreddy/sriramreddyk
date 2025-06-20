@@ -1,6 +1,8 @@
 import React from 'react';
 import {Typewriter,Cursor} from 'react-simple-typewriter'
 import sriramreddy from '../assets/ksriramreddy.pdf'
+import { animate, motion } from 'framer-motion';
+import {frameMotion} from "../utils/frameMotion"
 function About() {
   // const {text} = useTypewriter({
   //   words:['Developer','Designer','Problem Solver'],
@@ -12,38 +14,26 @@ function About() {
           words={['Developer','Designer','Problem Solver']}
           loop={true}/> */}
   return (
-    <div id='about' className='  flex items-start md:mt-56 mt-24  p-2  justify-around overflow-hidden  flex-col md:flex-row-reverse '>
-      <div className='  -ml-5 lg:w-1/2  w-full h-56 md:h-auto lg:-ml-20  flex items-center justify-center '>
-        <img className='mage drop-shadow-2l w-1/2 md:w-10/12' width={'100px'} height={'100px'}  src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747812551/z5sgeksgzr2prkz2o3xs.png"  alt="" />
-      </div>
-      <div className='w-full font-mono pb-10'>
+    <div id='about' className=' flex items-start min-h-full mt-32 p-2  justify-around overflow-hidden  flex-col md:flex-row-reverse'>
+      <div className='w-full bg-green-00  pb-10 z-10'>
         <div className='w-full flex gap-4 flex-col md:text-left text-center'>
           <h1 className=' md:text-4xl text-3xl font-bold'>Hi<span className='text-green-500'>,</span> I am</h1>
-          <h1 className=' md:text-4xl text-3xl font-bold'>Sriram Reddy</h1>
+          <motion.h1  className='md:text-6xl text-6xl relative font-[900]'>Sriram Reddy <motion.span initial={{width:"40%"}} animate={{width:0}} transition={{duration:1,ease:"backIn"}} viewport={{once : false}} className='absolute left-0 h-[106%] bg-green-400'></motion.span></motion.h1>
           <div className='flex lg:flex-row  flex-col w-full '>
-            <h2 className=' md:text-2xl text-xl w-72 md:mx-0 mx-auto md:w-96  font-bold'> I am a &nbsp;
-            {/* <Cursor cursorStyle='{' cursorBlinking={false}/>  */}
-            <span className='text-green-500'>
+            <h2 className=' md:text-2xl text-xl w-72 md:mx-0 mx-auto md:w-[27rem]  font-bold'> I am a &nbsp;
+            <span className='text-green-500 w-full '>
 
             <Typewriter words={['Developer','Problem Solver',"Full Stack Developer"]} loop={true}/>
             </span>
               <Cursor/>
               {/* <Cursor cursorStyle='}' cursorBlinking={false}/>  */}
             </h2>
-            {/* <div className=''>
-              <span className=' md:text-3xl text-2xl font-bold text-green-500' > 
-                <Cursor cursorStyle='{' cursorBlinking={false}/> &nbsp;</span>
-              <span className=' md:text-3xl text-xl font-bold text-green-500'>
-              <Typewriter  words={['Developer','Designer','Problem Solver']} loop={true}/>
-              <Cursor/>
-              <Cursor cursorStyle='}' cursorBlinking={false}/>
-              </span>
-            </div> */}
+            
           </div>
         </div>
-        <div className='lg:w-2/3 text-lg my-5 text-ellipsis flex flex-col items-center justify-center w-full md:text-left text-center'>
-          <h4 className='text-zinc-300 text-xl'>
-          I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.
+        <div className='lg:w-2/3 text-lg my-5 text-ellipsis   justify-center w-full md:text-left text-center'>
+          <h4 className='text-gray-300  text-xl/8 max-w-[700px] '>
+          A highly motivated <span>Full-Stack Developer</span> and <span>AI/ML</span>  enthusiast with hands-on experience building real-time and scalable web applications using the <span>MERN</span>  stack. Proficient in developing responsive user interfaces, secure backend APIs, and real-time communication using Socket.IO. I have experience working with <span>LLMs</span>, <span>RAG</span> pipelines,<span>OpenAI</span>  APIs, FAISS <span>vectorDBs</span>, and deploying production-ready apps on Render and Vercel. Passionate about integrating AI into full-stack apps to solve real-world problems through technology.
           </h4>
         </div>
         <div className='mt-16 flex md:block items-center justify-center'>

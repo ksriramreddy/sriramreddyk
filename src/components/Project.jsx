@@ -1,12 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import {frameMotion} from "../utils/frameMotion"
+const Project = ({project , idx}) => {
+  console.log(idx);
+  const x = idx%2==0? -300 : 300
+  const y = idx%2!=0? 100 : -100
 
-const Project = ({project}) => {
-  
   return (
     <>
-      <div className='projectwidth projectheight  bg-slate-900 rounded-3xl  p-4 transition-all duration-1000 hover:-translate-y-4 flex  flex-col gap-3'>
+      <motion.div variants={frameMotion(0,0,x,0.2)} initial="hidden" whileInView="show" viewport={{ margin: "10px", once: false }}className='projectwidth  bg-gray-900 rounded-3xl  p-4 transition-all duration-500 hover:-translate-y-4 gap-3'>
         <div className='w-full project-animation'>
-            <img className='w-full rounded-xl' src={project.image} alt="" />
+            <img className='w-full md:h-[240px] rounded-xl' src={project.image} alt="" />
         </div>
         <div>
           <div className='flex h-16 flex-wrap flex-row items-start'>
@@ -25,7 +29,7 @@ const Project = ({project}) => {
           <a href={project.code} target='_blank' className='p-2 border-green-500 rounded-lg  text-sm font-bold    bg-green-400 text-black'>Code</a >
           <a href={project.demo} target='_blank' className='p-2 border-green-500 rounded-lg  text-sm font-bold    bg-green-400 text-black'>Demo</a >
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

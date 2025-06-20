@@ -6,13 +6,28 @@ import portfolio1 from '../projectimages/portfolio/portfolio1.png'
 import games1 from '../projectimages/games/games1.png'
 import yt1 from '../projectimages/youtube/yt1.png'
 import discard1 from '../projectimages/discard/discard1.png'
-
 export const projects = [
     {
+        title : " Personal Voice-Based RAG Assistant",
+        image :"src/assets/projectimages/talk-to-me.png" ,
+        description : "Personalized AI Assistant that responds and speaks on my behalf by understanding context from my personal documents.",
+        technologies : ["Python", "LLM", "RAG","Embeddings","FastAPI", "Django"],
+        code : "https://github.com/ksriramreddy/MyVoiceAssitance.git",
+        demo : "https://talk-to-me-1xad.onrender.com"
+    },
+    {
+        title : "LLM-Powered Document QA Assistant",
+        image :"src/assets/projectimages/talk-to-me.png" ,
+        description : "AI Assistant  LLM-powered PDF Document Question Answering Assistant using FastAPI Hugging Face Transformers, and FAISS vector database.",
+        technologies : ["Python", "LLM", "RAG","Embeddings","FastAPI"],
+        code : "https://github.com/ksriramreddy/pdf-reader",
+        demo : "https://github.com/ksriramreddy/pdf-reader"
+    },
+    {
         title : "ECHO-AI Chat Application",
-        image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747813896/rk1vd8ma2ivppcqjc62x.png" ,
+        image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747813896/rk1vd8ma2ivppcqjc62x.png " ,
         description : "A MERN Stack project with seamless live chat with personal AI assitance feature.",
-        technologies : ["React", "Redux", "Firebase","Java Script","Chakra UI"],
+        technologies : ["ReactJs", "Nodejs", "ExpressJs","Mongodb","Socket.io","JWT"],
         code : "https://github.com/ksriramreddy/ECHO.git",
         demo : "https://echo-vvm8.onrender.com"
     },
@@ -20,7 +35,7 @@ export const projects = [
         title : "Instagram clone",
         image : insta1,
         description : "An Instagram clone built with React, Redux, and Firebase. Users can create, like, and comment on posts.",
-        technologies : ["ReactJs", "Nodejs", "ExpressJs","Mongodb","Socket.io","JWT"],
+        technologies : ["React", "Redux", "Firebase","Java Script","Chakra UI"],
         code : "https://github.com/ksriramreddy/instagram-clone.git",
         demo : "https://instagram-clone-sandy.vercel.app/"
     },
