@@ -9,7 +9,7 @@ import discard1 from '../projectimages/discard/discard1.png'
 export const projects = [
     {
         title : " Personal Voice-Based RAG Assistant",
-        image :"src/assets/projectimages/talk-to-me.png" ,
+        image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1750445721/jmzgdaplvyv6dsphijqp.png" ,
         description : "Personalized AI Assistant that responds and speaks on my behalf by understanding context from my personal documents.",
         technologies : ["Python", "LLM", "RAG","Embeddings","FastAPI", "Django"],
         code : "https://github.com/ksriramreddy/MyVoiceAssitance.git",
@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         title : "LLM-Powered Document QA Assistant",
-        image :"src/assets/projectimages/talk-to-me.png" ,
+        image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1750446090/ubuuyicsuj0kagbx12tt.png" ,
         description : "AI Assistant  LLM-powered PDF Document Question Answering Assistant using FastAPI Hugging Face Transformers, and FAISS vector database.",
         technologies : ["Python", "LLM", "RAG","Embeddings","FastAPI"],
         code : "https://github.com/ksriramreddy/pdf-reader",
