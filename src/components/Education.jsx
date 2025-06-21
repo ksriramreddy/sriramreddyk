@@ -5,7 +5,7 @@ const Education = () => {
   console.log(data);
   
   return (
-    <div id='education' className=' md:overflow-visible overflow-hidden  w-full relative'>
+    <div id='education' className='md:overflow-visible overflow-hidden  w-full relative'>
       <div className='w-full text-center  mb-10 text-4xl text-white title'>
         <h1>Education</h1>
       </div>

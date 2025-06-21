@@ -18,7 +18,7 @@ function About() {
       <div className='w-full bg-green-00  pb-10 z-10'>
         <div className='w-full flex gap-4 flex-col md:text-left text-center'>
           <h1 className=' md:text-4xl text-3xl font-bold'>Hi<span className='text-green-500'>,</span> I am</h1>
-          <motion.h1  className='md:text-6xl text-6xl relative font-[900]'>Sriram Reddy <motion.span initial={{width:"40%"}} animate={{width:0}} transition={{duration:1,ease:"backIn"}} viewport={{once : false}} className='absolute left-0 h-[106%] bg-green-400'></motion.span></motion.h1>
+          <motion.h1  className='md:text-6xl text-6xl relative font-[900]'>Sriram Reddy <motion.span initial={{width:"40%"}} animate={{width:0}} transition={{duration:0.5,ease:"backIn"}} viewport={{once : false}} className='absolute left-0 h-[106%] bg-green-400'></motion.span></motion.h1>
           <div className='flex lg:flex-row  flex-col w-full '>
             <h2 className=' md:text-2xl text-xl w-72 md:mx-0 mx-auto md:w-[27rem]  font-bold'> I am a &nbsp;
             <span className='text-green-500 w-full '>

@@ -14,11 +14,11 @@ const Projects = () => {
 
     
   return (
-    <div id='projects' className='  flex flex-col  gap-10 justify-center items-center w-full '>
+    <div id='projects' className='flex flex-col  gap-10 justify-center items-center '>
         <div className=' text-4xl'>
             <h1 className=' text-center  mx-auto'>My <span className='border-b-4 border border-l-transparent border-t-transparent border-r-transparent border-b-green-500'>Works</span></h1>
         </div>
-        <div className='  pl-2 pr-2  text gap-5  mx-auto w-full flex flex-wrap ' >
+        <div className='  pl-2 pr-2 overflow-hidden  text gap-5  mx-auto w-full flex flex-wrap ' >
             {/* <div className='text-center    '>
                 <button onClick={()=>{handleScroll(-275)}} className=' text-green-500 text-4xl'><FaAngleDoubleLeft/></button>
             </div>   */}
