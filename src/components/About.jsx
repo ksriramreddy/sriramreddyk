@@ -1,6 +1,6 @@
 import React from 'react';
 import {Typewriter,Cursor} from 'react-simple-typewriter'
-import sriramreddy from '../assets/ksriramreddy.pdf'
+// import sriramreddy from '../../public/ksriramreddy-4.pdf'
 import { animate, motion } from 'framer-motion';
 import {frameMotion} from "../utils/frameMotion"
 function About() {
@@ -18,7 +18,7 @@ function About() {
       <div className='w-full bg-green-00  pb-10 z-10'>
         <div className='w-full flex gap-4 flex-col md:text-left text-center'>
           <h1 className=' md:text-4xl text-3xl font-bold'>Hi<span className='text-green-500'>,</span> I am</h1>
-          <motion.h1  className='md:text-6xl text-6xl relative font-[900]'>Sriram Reddy <motion.span initial={{width:"40%"}} animate={{width:0}} transition={{duration:0.5,ease:"backIn"}} viewport={{once : false}} className='absolute left-0 h-[106%] bg-green-400'></motion.span></motion.h1>
+          <motion.h1 className='md:text-6xl text-6xl relative font-[900]'>Sriram Reddy <motion.span initial={{width:"40%"}} animate={{width:0}} transition={{duration:0.5,ease:"backIn"}} viewport={{once : false}} className='absolute left-0 h-[106%] bg-green-400'></motion.span></motion.h1>
           <div className='flex lg:flex-row  flex-col w-full '>
             <h2 className=' md:text-2xl text-xl w-72 md:mx-0 mx-auto md:w-[27rem]  font-bold'> I am a &nbsp;
             <span className='text-green-500 w-full '>
@@ -37,8 +37,8 @@ function About() {
           </h4>
         </div>
         <div className='mt-16 flex md:block items-center justify-center'>
-          <a href={sriramreddy} className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download> Get Resume</a>
-        </div>
+          <a href="/ksriramreddy.pdf" className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download> Get Resume</a>
+        </div>  
       </div>
     </div>
   );
