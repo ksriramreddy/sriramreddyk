@@ -13,7 +13,7 @@ export const projects = [
         description : "Personalized AI Assistant that responds and speaks on my behalf by understanding context from my personal documents.",
         technologies : ["Python","Pytorch", "Machine Learning", "Deep Learning","CNN","React Js", "Fast API"],
         code : "https://github.com/ksriramreddy/Pneumonia-test",
-        demo : "https://pneumonia-test-zdxb.onrender.com/"
+        demo : "https://pneumoniatest.onrender.com/"
     },
     {
         title : " Personal Voice-Based RAG Assistant",
