@@ -359,22 +359,21 @@ z-index: 999;
   /* text-shadow: 0 0 1x #fff, 0 0 2px #fff, 0 0 3px #7fe565, 0 0 4px #7fe565, 0 0 50px #7fe565, 0 0 6px #7fe565, 0 0 7px #7fe565; */
 }
 
-.project-scrollbar::-webkit-scrollbar{
-  width: 2px;
-  height: 5px;
+body::-webkit-scrollbar{
+  width: 7px;
   color: #75e064;
   background-color: transparent;
   border-radius: 100px;
   padding: 5px;
 }
-.project-scrollbar::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
   background-color: #75e064;
   border-radius: 5px;
   margin: 5px;
   /* height: 100px; */
   width: 10px;
 }
-.project-scrollbar::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track{
   background-color: transparent;
   border-radius: 50px;
   border: none;
