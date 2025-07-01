@@ -9,6 +9,14 @@ import discard1 from '../projectimages/discard/discard1.png'
 export const projects = [
     {
         title : " Personal Voice-Based RAG Assistant",
+        image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1751385579/dlbepecz0vovjkycitwo.png",
+        description : "Personalized AI Assistant that responds and speaks on my behalf by understanding context from my personal documents.",
+        technologies : ["Python","Pytorch", "Machine Learning", "Deep Learning","CNN","React Js", "Fast API"],
+        code : "https://github.com/ksriramreddy/Pneumonia-test",
+        demo : "https://pneumonia-test-zdxb.onrender.com/"
+    },
+    {
+        title : " Personal Voice-Based RAG Assistant",
         image :"https://res.cloudinary.com/dqnmzdsoy/image/upload/v1750445721/jmzgdaplvyv6dsphijqp.png" ,
         description : "Personalized AI Assistant that responds and speaks on my behalf by understanding context from my personal documents.",
         technologies : ["Python", "LLM", "RAG","Embeddings","FastAPI", "Django"],
