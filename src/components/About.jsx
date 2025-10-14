@@ -37,7 +37,7 @@ function About() {
           </h4>
         </div>
         <div className='mt-16 flex md:block items-center justify-center'>
-          <a href="/ksriramreddy.pdf" className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download> Get Resume</a>
+          <a href="https://drive.google.com/file/d/1W_1Gj1ixE3ulSQR10sxRDrfVAGRcI_UC/view" className='p-4 border-green-500 rounded-xl hover:bg-black hover:text-white transition duration-700 ease-linear text-xl font-bold pl-9 pr-9   bg-green-500 greenshadow text-black ' download> Get Resume</a>
         </div>  
       </div>
     </div>
