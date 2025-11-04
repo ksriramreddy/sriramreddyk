@@ -1,16 +1,18 @@
 import React from 'react';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillHtml5, AiFillOpenAI } from 'react-icons/ai';
 import { BiLogoCPlusPlus, BiLogoTailwindCss } from 'react-icons/bi';
 import { FaBootstrap, FaCss3Alt, FaNodeJs } from 'react-icons/fa';
-import { FaDatabase, FaGitAlt, FaGithub, FaJava, FaPython } from 'react-icons/fa6';
+import { FaDatabase, FaGitAlt, FaGithub, FaJava, FaMeta, FaPython } from 'react-icons/fa6';
 import { IoLogoJavascript } from 'react-icons/io';
+// import { RiClaudeFill } from "react-icons/ri";
 import { IoLogoFigma, IoLogoReact } from 'react-icons/io5';
 import { PiMicrosoftPowerpointLogo, PiMicrosoftPowerpointLogoFill } from 'react-icons/pi';
-import { SiApifox, SiAppwrite, SiCanva, SiChakraui, SiExpress, SiFirebase, SiMongodb, SiMysql, SiRedux, SiSqlite } from 'react-icons/si';
+import { SiApifox, SiAppwrite, SiCanva, SiChakraui, SiExpress, SiFirebase, SiHuggingface, SiKeras, SiLangchain, SiMongodb, SiMysql, SiNumpy, SiPandas, SiPytorch, SiRedux, SiScikitlearn, SiSqlite, SiTensorflow } from 'react-icons/si';
 import { TbApi, TbBrandSocketIo, TbHexagonLetterCFilled } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 import { VscVscode } from 'react-icons/vsc';
 import { frameMotion } from "../utils/frameMotion"
+// import { RiClaudeFill } from 'react-icons/ri';
 
 
 const Skills = () => {
@@ -115,7 +117,7 @@ const Skills = () => {
           <motion.div variants={frameMotion(.5,-100,100,0.3)} initial="hidden" whileInView="show" viewport={{margin : "100px", once:false}}  className='flex   md:mt-0  flex-wrap max-w-96 border-1  flex-col gap-5   '>
             <div className='boxbg rounded-xl flex flex-col gap-4 hovereffect p-5'>
               <div className='text-center text-3xl font-bold'>
-                <h1 >Programming</h1>
+                <h1 >Programming & Tools</h1>
               </div>
               <div className='flex flex-wrap gap-2 items-center justify-center'>
                 <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
@@ -142,16 +144,6 @@ const Skills = () => {
                   <span className='text-violet-200 text-2xl'><SiMysql /></span>
                   <h4 className=' '>MySQL</h4>
                 </div>
-              </div>
-            </div>
-            <span className='leftarrow'></span>
-          </motion.div>
-          <motion.div variants={frameMotion(.6,-100,-100,0.3)} initial="hidden" whileInView="show" viewport={{margin : "100px", once:false}}  className='flex   md:mt-0  flex-wrap max-w-96 border-1  flex-col gap-5     '>
-            <div className='boxbg rounded-xl flex flex-col gap-4 hovereffect p-5'>
-              <div className='text-center text-3xl font-bold '>
-                <h1 >Others</h1>
-              </div>
-              <div className='flex flex-wrap gap-2 items-center justify-center'>
                 <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
                   <span className='text-red-400  '><FaGitAlt /></span>
                   <h4>Git</h4>
@@ -172,9 +164,60 @@ const Skills = () => {
                   <span className='text-violet-600'><SiCanva /></span>
                   <h4 className=' '>Canva</h4>
                 </div>
-                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                {/* <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
                   <span className='text-red-500'><PiMicrosoftPowerpointLogoFill /></span>
                   <h4 className=' '>PPT</h4>
+                </div> */}
+              </div>
+            </div>
+            <span className='leftarrow'></span>
+          </motion.div>
+          <motion.div variants={frameMotion(.6,-100,-100,0.3)} initial="hidden" whileInView="show" viewport={{margin : "100px", once:false}}  className='flex   md:mt-0  flex-wrap max-w-96 border-1  flex-col gap-5     '>
+            <div className='boxbg rounded-xl flex flex-col gap-4 hovereffect p-5'>
+              <div className='text-center text-3xl font-bold '>
+                <h1 >AI & ML</h1>
+              </div>
+              <div className='flex flex-wrap gap-2 items-center justify-center'>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-red-400 text-2xl  '><SiLangchain /></span>
+                  <h4>Langchain</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-white '><AiFillOpenAI /></span>
+                  <h4>OpenAI</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-blue-500'><FaMeta /></span>
+                  <h4>FAISS</h4>
+                </div>
+                <div className='flex flex-row min-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='bg-yellow-200 text-black rounded-full text-xl'><SiHuggingface /></span>
+                  <h4 className=' '>Hugging Face</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-red-400'><SiPytorch /></span>
+                  <h4 className=' '>Pytorch</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-orange-400'><SiTensorflow /></span>
+                  <h4 className=' '>Tensorflow</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-blue-400'><SiScikitlearn /></span>
+                  <h4 className=' '>SK Learn</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-blue-400'><SiKeras /></span>
+                  <h4 className=' '>Keras</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-blue-600'><SiPandas /></span>
+                  <h4 className=' '>Pandas</h4>
+                </div>
+                <div className='flex flex-row max-w-fit items-center justify-between border rounded-lg  border-zinc-400 bounce  '>
+                  <span className='text-blue-300'><SiNumpy />
+</span>
+                  <h4 className=' '>Numpy</h4>
                 </div>
 
               </div>

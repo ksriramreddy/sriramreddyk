@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { frameMotion } from "../utils/frameMotion";
+import { LiaLinkSolid } from "react-icons/lia";
+import { FaLink } from "react-icons/fa";
 
 function Experience() {
   const experience = {
@@ -50,8 +52,8 @@ function Experience() {
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               {experience.role}
             </h2>
-            <h3 className="text-green-400 text-xl mt-2 font-semibold">
-              {experience.company} – [{experience.location}]
+            <h3 className="text-green-400 flex items-center text-xl mt-2 font-semibold">
+              {experience.company} – [{experience.location}] <a href="https://dataspeaks.tech/" target="_blank" className="mx-3"><FaLink /></a>
             </h3>
             <p className="text-gray-400 text-sm mt-1">
               {experience.startDate} – {experience.endDate}
