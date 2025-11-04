@@ -37,7 +37,7 @@ export const projects = [
     },
     {
         title: "LLM-Powered Document QA Assistant",
-        image: "https://res.cloudinary.com/dqnmzdsoy/image/upload/v1750446090/ubuuyicsuj0kagbx12tt.png",
+        image: "https://res.cloudinary.com/dqnmzdsoy/image/upload/v1762267841/mymzegcrtrym2yfhnpp3.png",
         description: "AI Assistant  LLM-powered PDF Document Question Answering Assistant using FastAPI Hugging Face Transformers, and FAISS vector database.",
         technologies: ["Python", "LLM", "RAG", "Embeddings", "FastAPI"],
         code: "https://github.com/ksriramreddy/pdf-reader",

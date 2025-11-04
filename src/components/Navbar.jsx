@@ -28,6 +28,7 @@ const Navbar = () => {
         <div className=' flex gap-7 hidden md:block'>
             <a className='p-2 text-white text-xl  transition hover:text-green-500 duration-400 ease-in' href="#about"> About</a>
             <a className='p-2 text-white text-xl  transition duration-400 ease-in hover:text-green-500 ' href="#skill">Skills</a>
+            <a className='p-2 text-white text-xl  transition duration-400 ease-in hover:text-green-500 ' href="#experience">Experience</a>
             <a className='p-2 text-white text-xl  transition hover:text-green-500 duration-400 ease-in' href="#projects"> Projects</a>
             <a className='p-2 text-white text-xl  transition hover:text-green-500 duration-400 ease-in' href="#education"> Education</a>
         </div>
