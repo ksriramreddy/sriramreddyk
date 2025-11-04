@@ -23,7 +23,7 @@ function About() {
             <h2 className=' md:text-2xl text-xl w-72 md:mx-0 mx-auto md:w-[27rem]  font-bold'> I am a &nbsp;
             <span className='text-green-500 w-full '>
 
-            <Typewriter words={['Developer','Problem Solver',"Full Stack Developer"]} loop={true}/>
+            <Typewriter words={['AI/ML enthusiast','Problem Solver',"Full Stack Developer"]} loop={true}/>
             </span>
               <Cursor/>
               {/* <Cursor cursorStyle='}' cursorBlinking={false}/>  */}
