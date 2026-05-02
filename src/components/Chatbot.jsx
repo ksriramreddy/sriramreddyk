@@ -1,8 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { IoClose, IoSend, IoExpand, IoContract } from 'react-icons/io5';
 import { RiRobot2Fill } from 'react-icons/ri';
+
+// Converts literal \n escapes to real newlines for markdown
+const normalizeText = (text) =>
+  text
+    .replace(/\\n/g, '\n')
+    .replace(/\\t/g, ' ');
 
 const QUICK_PROMPTS = [
   { label: 'His Skills',       full: 'What are Sriram\'s technical skills?' },
@@ -65,7 +72,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('https://agent-prod.studio.lyzr.ai/v3/inference/stream/', {
+      const res = await fetch('https://agent-prod.studio.lyzr.ai/v3/inference/chat/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -79,62 +86,14 @@ const Chatbot = () => {
         }),
       });
 
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let botText = '';
+      const data = await res.json();
+      const reply =
+        data?.response ??
+        data?.message ??
+        data?.choices?.[0]?.message?.content ??
+        'Sorry, I could not get a response.';
 
-      // Add empty bot message to stream into, hide typing dots
-      setMessages(prev => [...prev, { role: 'bot', text: '' }]);
-      setLoading(false);
-
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split('\n').filter(l => l.trim());
-
-        for (const line of lines) {
-          // SSE format: "data: {...}"
-          const raw = line.startsWith('data:') ? line.slice(5).trim() : line.trim();
-          if (!raw || raw === '[DONE]') continue;
-
-          try {
-            const parsed = JSON.parse(raw);
-            const token =
-              parsed?.response ??
-              parsed?.message ??
-              parsed?.delta?.content ??
-              parsed?.choices?.[0]?.delta?.content ??
-              '';
-            if (token) {
-              botText += token;
-              setMessages(prev => {
-                const updated = [...prev];
-                updated[updated.length - 1] = { role: 'bot', text: botText };
-                return updated;
-              });
-            }
-          } catch {
-            // plain text chunk
-            botText += raw;
-            setMessages(prev => {
-              const updated = [...prev];
-              updated[updated.length - 1] = { role: 'bot', text: botText };
-              return updated;
-            });
-          }
-        }
-      }
-
-      if (!botText) {
-        setMessages(prev => {
-          const updated = [...prev];
-          updated[updated.length - 1] = { role: 'bot', text: 'Sorry, I could not get a response.' };
-          return updated;
-        });
-      }
+      setMessages(prev => [...prev, { role: 'bot', text: reply }]);
     } catch {
       setMessages(prev => [...prev, { role: 'bot', text: 'Something went wrong. Please try again.' }]);
     } finally {
@@ -204,7 +163,7 @@ const Chatbot = () => {
                     }`}
                   >
                     {msg.role === 'bot' ? (
-                      <ReactMarkdown
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}
                         components={{
                           p: ({ children }) => <p className="mb-1 last:mb-0">{children}</p>,
                           strong: ({ children }) => <strong className="text-green-400 font-semibold">{children}</strong>,
@@ -225,7 +184,7 @@ const Chatbot = () => {
                           ),
                         }}
                       >
-                        {msg.text}
+                        {normalizeText(msg.text)}
                       </ReactMarkdown>
                     ) : (
                       msg.text
