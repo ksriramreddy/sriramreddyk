@@ -118,11 +118,13 @@ const Chatbot = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.85, y: 20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-            className={`fixed z-[9999] flex flex-col rounded-2xl overflow-hidden shadow-2xl border border-gray-700 transition-all duration-300 ${
-              isExpanded
-                ? 'bottom-0 right-0 w-full h-full rounded-none border-0 sm:bottom-5 sm:right-5 sm:w-[700px] sm:h-[85vh] sm:rounded-2xl sm:border'
-                : 'bottom-24 right-5 w-[calc(100vw-40px)] sm:w-[400px] h-[520px]'
-            }`}
+            className={`fixed z-[9999] flex flex-col overflow-hidden shadow-2xl transition-all duration-300
+              inset-0 rounded-none border-0
+              sm:inset-auto sm:rounded-2xl sm:border sm:border-gray-700
+              ${isExpanded
+                ? 'sm:bottom-5 sm:right-5 sm:w-[700px] sm:h-[85vh]'
+                : 'sm:bottom-24 sm:right-5 sm:w-[400px] sm:h-[520px]'
+              }`}
             style={{ backgroundColor: '#0d0d0d' }}
           >
             {/* Header */}
@@ -138,10 +140,16 @@ const Chatbot = () => {
               <div className="ml-auto flex items-center gap-2">
                 <button
                   onClick={() => setIsExpanded(prev => !prev)}
-                  className="text-gray-400 hover:text-green-400 transition text-lg p-1 rounded-lg hover:bg-gray-800"
+                  className="hidden sm:flex text-gray-400 hover:text-green-400 transition text-lg p-1 rounded-lg hover:bg-gray-800"
                   title={isExpanded ? 'Collapse' : 'Expand'}
                 >
                   {isExpanded ? <IoContract /> : <IoExpand />}
+                </button>
+                <button
+                  onClick={() => { setIsOpen(false); setIsExpanded(false); }}
+                  className="sm:hidden text-gray-400 hover:text-white transition text-2xl p-1 rounded-lg hover:bg-gray-800"
+                >
+                  <IoClose />
                 </button>
               </div>
             </div>
@@ -276,10 +284,10 @@ const Chatbot = () => {
       {/* Floating Button */}
       <motion.button
         onClick={() => setIsOpen(prev => !prev)}
-        style={{ display: isExpanded ? 'none' : 'flex', boxShadow: '0 0 24px rgba(0,255,77,0.5)' }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-5 right-5 z-[9999] w-14 h-14 rounded-full bg-green-500 text-black items-center justify-center text-2xl shadow-lg"
+        className={`fixed bottom-5 right-5 z-[9999] w-14 h-14 rounded-full bg-green-500 text-black items-center justify-center text-2xl shadow-lg ${isExpanded ? '!hidden' : isOpen ? 'hidden sm:flex' : 'flex'}`}
+        style={{ boxShadow: '0 0 24px rgba(0,255,77,0.5)' }}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
