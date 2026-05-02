@@ -20,12 +20,12 @@ const PROMPTS = [
   "📬 Want to get in touch with me?",
 ];
 
-const SESSION_ID = '69f59839082079ea2b153ff3-dzkihw6puxl';
-const AGENT_ID = '69f59839082079ea2b153ff3';
-const USER_ID = 'sriram@lyzr.ai';
-const API_KEY = 'sk-default-IjvgrZDhiW1wm1ydxpuKPEJrmcqxsx35';
+const AGENT_ID = import.meta.env.VITE_LYZR_AGENT_ID;
+const USER_ID = import.meta.env.VITE_LYZR_USER_ID;
+const API_KEY = import.meta.env.VITE_LYZR_API_KEY;
 
 const Chatbot = () => {
+  const sessionId = useRef(`${AGENT_ID}-${crypto.randomUUID()}`);
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showQuickPrompts, setShowQuickPrompts] = useState(true);
@@ -74,7 +74,7 @@ const Chatbot = () => {
         body: JSON.stringify({
           user_id: USER_ID,
           agent_id: AGENT_ID,
-          session_id: SESSION_ID,
+          session_id: sessionId.current,
           message: text,
         }),
       });
