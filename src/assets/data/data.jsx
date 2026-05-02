@@ -1,4 +1,6 @@
 
+import lyzrLogo from '../lyzrlogo.png'
+import dataspeaksLogo from '../dataspeakslogo.png'
 import insta1 from '../projectimages/insta/insta1.jpeg'
 import webchat1 from '../projectimages/webchat/webchat1.png'
 import ml1 from '../projectimages/machinelearning/ml1.png'
@@ -138,6 +140,41 @@ export const education = [
         description: "I have completed my schooling in SSC (X) at Orbit-e-Techno School with the grade of 9.5 CGPA",
         image: insta1,
     }
+]
+
+export const experiences = [
+    {
+        company: "Lyzr AI",
+        logo: lyzrLogo,
+        role: "AI Engineer & Full Stack Developer",
+        type: "Full-time",
+        location: "Remote",
+        link: "https://lyzr.ai/",
+        startDate: "Jan 2026",
+        endDate: "Present",
+        details: [
+            "Work as the sole developer building AI-powered MVPs across multiple industries including customer support, procurement, finance, and banking.",
+            "Engineered industry-specific AI solutions that reduce human effort by up to 80%, delivering measurable ROI for clients.",
+            "Contributed to Lyzr's own product — Lyzr GPT — combining full-stack development with AI/ML integration.",
+        ],
+        skills: ["Python", "React.js", "Node.js", "LLMs", "RAG", "AI Agents", "FastAPI", "MongoDB", "Lyzr SDK"],
+    },
+    {
+        company: "DataSpeaks",
+        logo: dataspeaksLogo,
+        role: "Fullstack Developer Intern",
+        type: "Internship",
+        location: "Remote",
+        link: "https://dataspeaks.tech/",
+        startDate: "Oct 2024",
+        endDate: "Feb 2025",
+        details: [
+            "Contributed 70% frontend (React.js) and 20% backend (Node.js, Express.js) development, improving performance by 30%.",
+            "Built and integrated RESTful APIs, implemented JWT authentication, and optimized MongoDB queries.",
+            "Collaborated in Agile sprints, ensuring scalable, responsive, and secure web app delivery.",
+        ],
+        skills: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Agile", "Tailwind", "HTML5", "CSS"],
+    },
 ]
 
 const skills = [

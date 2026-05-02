@@ -1,73 +1,68 @@
 import React from 'react';
-import {education as data} from '../assets/data/data'
+import { motion } from 'framer-motion';
+import { frameMotion } from '../utils/frameMotion';
+import { education as data } from '../assets/data/data';
 
 const Education = () => {
-  console.log(data);
-  
   return (
-    <div id='education' className='md:overflow-visible overflow-hidden  w-full relative'>
-      <div className='w-full text-center  mb-10 text-4xl text-white title'>
+    <div id='education' className='w-full py-20 px-4 overflow-hidden' style={{ background: '#000' }}>
+      <div className='w-full text-center mb-14 text-4xl text-white title'>
         <h1>Education</h1>
       </div>
-      <div className='w-full rounded-3xl edu-line relative h-full'>
-        
-        <div>
-          <img className='clg-logo cmr' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811992/tb7xsgrlc0mm7odwpmwn.png" alt="" />
-        </div>  
-        <div>
-          <img className='clg-logo gioe' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811984/zwdvvtnf1hzblehsa6kb.jpg" alt="" />
-        </div>
-        <div>
-          <img className='clg-logo orbit' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811975/hj6bgdegicpvjgucqkum.webp" alt="" />
-        </div>
-        <div className=' p-5 border  edu edu-cmr lefttoright boxbg rounded-2xl   flex flex-col gap-2'>
-          <div className='flex gap-2'>
-            <div>
-              <img className='w-20' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811992/tb7xsgrlc0mm7odwpmwn.png" alt="" />
-            </div>
-            <div className='flex flex-col'>
-              <h1 className='text-xl'>{data[0].institution}</h1>
-              <h1 className='text-sm opacity-80'>{data[0].degree}</h1>
-              <h1 className='text-sm opacity-80'>{data[0].field}</h1>
-              <h1 className='text-xs opacity-80'>{data[0].year}</h1>
-            </div>
-          </div>
-          <div className='text-sm font-bold text-slate-400'> Grade : {data[0].gpa}</div>
-          <div className='textstyle  '>{data[0].description }</div>
-        </div>
-        <div className=' p-5  edu-gioe border edu  righttoleft boxbg rounded-2xl m-3 flex flex-col gap-2'>
-          <div className='flex gap-2'>
-            <div>
-              <img className='w-20' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811984/zwdvvtnf1hzblehsa6kb.jpg" alt="" />
-            </div>
-            <div className='flex flex-col'>
-              <h1 className='text-xl'>{data[1].institution}</h1>
-              <h1 className='text-sm opacity-80'>{data[1].degree}</h1>
-              <h1 className='text-sm opacity-80'>{data[1].field}</h1>
-              <h1 className='text-xs opacity-80'>{data[1].year}</h1>
-            </div>
-          </div>
-          <div className='text-sm font-bold text-slate-400'> Grade : {data[1].gpa}</div>
-          <div className='textstyle  '>{data[1].description }</div>
-        </div>
-        <div className=' p-5 border edu-orbit edu lefttoright boxbg rounded-2xl m-3 flex flex-col gap-2'>
-          <div className='flex gap-2'>
-            <div>
-              <img className='w-20' src="https://res.cloudinary.com/dqnmzdsoy/image/upload/v1747811975/hj6bgdegicpvjgucqkum.webp" alt="" />
-            </div>
-            <div className='flex flex-col'>
-              <h1 className='text-xl'>{data[2].institution}</h1>
-              <h1 className='text-sm opacity-80'>{data[2].degree}</h1>
-              <h1 className='text-sm opacity-80'>{data[2].field}</h1>
-              <h1 className='text-xs opacity-80'>{data[2].year}</h1>
-            </div>
-          </div>
-          <div className='text-sm font-bold text-slate-400'> Grade : {data[2].gpa}</div>
-          <div className='textstyle'>{data[2].description }</div>
+
+      <div className='relative max-w-4xl mx-auto'>
+        {/* Timeline line — hidden on mobile */}
+        <div className='hidden md:block absolute left-1/2 top-0 bottom-0 w-[3px] bg-white/20 rounded-full -translate-x-1/2'
+          style={{ boxShadow: '0px 0px 20px 3px rgba(0,255,77,0.3)' }} />
+
+        <div className='flex flex-col gap-10'>
+          {data.map((item, i) => {
+            const isLeft = i % 2 === 0;
+            return (
+              <motion.div
+                key={i}
+                variants={frameMotion(0, 0, isLeft ? -80 : 80, 0.4)}
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: false }}
+                className={`relative flex flex-col md:flex-row items-center gap-4 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+              >
+                {/* Card */}
+                <div className='w-full md:w-[46%] boxbg rounded-2xl p-5 flex flex-col gap-3 border border-gray-700'>
+                  <div className='flex items-center gap-3'>
+                    <img
+                      src={item.image}
+                      alt={item.institution}
+                      className='w-14 h-14 rounded-full object-cover border-2 border-white shrink-0'
+                    />
+                    <div>
+                      <h2 className='text-white text-lg font-bold leading-tight'>{item.institution}</h2>
+                      <p className='text-green-400 text-sm font-medium'>{item.degree}</p>
+                      <p className='text-gray-400 text-xs'>{item.field}</p>
+                    </div>
+                  </div>
+                  <div className='flex items-center justify-between text-xs text-gray-400'>
+                    <span>{item.year}</span>
+                    <span className='text-green-400 font-semibold'>{item.gpa}</span>
+                  </div>
+                  <p className='text-gray-400 text-sm leading-relaxed'>{item.description}</p>
+                </div>
+
+                {/* Center dot — desktop only */}
+                <div className='hidden md:flex w-[8%] justify-center'>
+                  <div className='w-4 h-4 rounded-full bg-green-400 border-2 border-black z-10'
+                    style={{ boxShadow: '0px 0px 12px 3px rgba(0,255,77,0.6)' }} />
+                </div>
+
+                {/* Spacer for opposite side */}
+                <div className='hidden md:block w-[46%]' />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Education;

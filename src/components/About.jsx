@@ -23,7 +23,7 @@ function About() {
             <h2 className=' md:text-2xl text-xl w-72 md:mx-0 mx-auto md:w-[27rem]  font-bold'> I am a &nbsp;
             <span className='text-green-500 w-full '>
 
-            <Typewriter words={['AI/ML enthusiast','Problem Solver',"Full Stack Developer"]} loop={true}/>
+            <Typewriter words={['AI Engineer','Full Stack Developer','Problem Solver']} loop={true}/>
             </span>
               <Cursor/>
               {/* <Cursor cursorStyle='}' cursorBlinking={false}/>  */}
@@ -33,7 +33,7 @@ function About() {
         </div>
         <div className='lg:w-2/3 text-lg my-5 text-ellipsis   justify-center w-full md:text-left text-center'>
           <h4 className='text-gray-300  text-xl/8 max-w-[700px] '>
-          A highly motivated <span>Full-Stack Developer</span> and <span>AI/ML</span>  enthusiast with hands-on experience building real-time and scalable web applications using the <span>MERN</span>  stack. Proficient in developing responsive user interfaces, secure backend APIs, and real-time communication using Socket.IO. I have experience working with <span>LLMs</span>, <span>RAG</span> pipelines,<span>OpenAI</span>  APIs, FAISS <span>vectorDBs</span>, and deploying production-ready apps on Render and Vercel. Passionate about integrating AI into full-stack apps to solve real-world problems through technology.
+          A <span>Full-Stack Developer</span> and <span>AI Engineer</span> with professional experience building AI-powered solutions across industries like customer support, procurement, finance, and banking. Skilled in developing <span>LLM</span>-driven applications, <span>RAG</span> pipelines, and <span>AI Agents</span> that reduce human effort by up to 80%. Proficient in the <span>MERN</span> stack, <span>FastAPI</span>, and real-time systems using Socket.IO, with production deployments on Render and Vercel. Currently building industry-grade AI MVPs and contributing to <span>Lyzr GPT</span> at Lyzr AI.
           </h4>
         </div>
         <div className='mt-16 flex md:block items-center justify-center'>
