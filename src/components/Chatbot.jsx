@@ -41,7 +41,7 @@ const Chatbot = () => {
   const [promptIndex, setPromptIndex] = useState(0);
   const [showPrompt, setShowPrompt] = useState(true);
   const [messages, setMessages] = useState([
-    { role: 'bot', text: "Hi! I'm Sriram's AI assistant. Ask me anything about him — his skills, projects, experience, or anything else!" }
+    { role: 'bot', text: "Hey! I'm Sriram. 👋 Great to have you here!\n\nWhat brings you by? Feel free to ask me anything — my projects, skills, experience, or how to reach me." }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -136,8 +136,8 @@ const Chatbot = () => {
                 <RiRobot2Fill />
               </div>
               <div>
-                <p className="text-white font-bold text-sm leading-tight">Sriram's Assistant</p>
-                <p className="text-green-400 text-xs">Ask me anything about Sriram</p>
+                <p className="text-white font-bold text-sm leading-tight">Sriram Reddy</p>
+                <p className="text-green-400 text-xs">AI Engineer & Full Stack Developer</p>
               </div>
               <div className="ml-auto flex items-center gap-2">
                 <button
@@ -256,7 +256,8 @@ const Chatbot = () => {
                 className="min-w-0 flex-1 bg-gray-800 text-white text-sm px-3 py-3 rounded-xl outline-none placeholder-gray-500 border border-gray-700 focus:border-green-500 transition"
               />
               <button
-                onClick={sendMessage}
+                type="button"
+                onClick={() => sendMessage()}
                 disabled={!input.trim() || loading}
                 className="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center text-black text-lg hover:bg-green-400 transition disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
               >

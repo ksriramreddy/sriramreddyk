@@ -70,7 +70,7 @@ const Contact = () => {
         <div className='w-full text-center text-white text-5xl'>
           <h1 >Contact</h1>
         </div>
-        <form ref={formRef} onSubmit={handleSubmit} className=' inputdiv flex flex-col gap-5 md:w-1/3 p-6 boxbg rounded-lg' >
+        <form ref={formRef} onSubmit={handleSubmit} className='flex flex-col gap-5 w-[90%] sm:w-2/3 md:w-1/2 lg:w-1/3 p-6 boxbg rounded-lg'>
           <h2 className='text-white text-3xl'>Let's Connect</h2>
           <input required className='input bgbox' placeholder='Your email' type="email" name="from_email" />
           <input required className='input bgbox' placeholder='Your name' type="text" name="from_name" />
