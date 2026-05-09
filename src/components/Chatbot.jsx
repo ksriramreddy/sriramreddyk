@@ -31,6 +31,8 @@ const AGENT_ID = import.meta.env.VITE_LYZR_AGENT_ID;
 const USER_ID = import.meta.env.VITE_LYZR_USER_ID;
 const API_KEY = import.meta.env.VITE_LYZR_API_KEY;
 
+if (!API_KEY) console.error('[Chatbot] VITE_LYZR_API_KEY is not defined — restart the dev server after adding .env');
+
 const Chatbot = () => {
   const sessionId = useRef(`${AGENT_ID}-${crypto.randomUUID()}`);
   const [isOpen, setIsOpen] = useState(false);
@@ -173,23 +175,35 @@ const Chatbot = () => {
                     {msg.role === 'bot' ? (
                       <ReactMarkdown remarkPlugins={[remarkGfm]}
                         components={{
-                          p: ({ children }) => <p className="mb-1 last:mb-0">{children}</p>,
+                          p: ({ children }) => <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>,
                           strong: ({ children }) => <strong className="text-green-400 font-semibold">{children}</strong>,
-                          ul: ({ children }) => <ul className="list-disc pl-4 space-y-1">{children}</ul>,
-                          ol: ({ children }) => <ol className="list-decimal pl-4 space-y-1">{children}</ol>,
-                          li: ({ children }) => <li>{children}</li>,
+                          ul: ({ children }) => <ul className="list-disc pl-4 space-y-1 my-1">{children}</ul>,
+                          ol: ({ children }) => <ol className="list-decimal pl-4 space-y-1 my-1">{children}</ol>,
+                          li: ({ children }) => <li className="leading-relaxed">{children}</li>,
                           code: ({ children }) => <code className="bg-gray-700 px-1 rounded text-green-300 text-xs">{children}</code>,
-                          a: ({ href, children }) => (
-                            <a
-                              href={href}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex items-center gap-1 text-green-400 underline underline-offset-2 hover:text-green-300 break-all transition"
-                            >
-                              {children}
-                              <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            </a>
-                          ),
+                          a: ({ href, children }) => {
+                            const isWhatsApp = href?.includes('whatsapp') || href?.includes('wa.me');
+                            const isLinkedIn = href?.includes('linkedin');
+                            const isGitHub = href?.includes('github');
+                            const isMail = href?.startsWith('mailto');
+
+                            const icon = isWhatsApp ? '💬' : isLinkedIn ? '🔗' : isGitHub ? '💻' : isMail ? '✉️' : '🔗';
+                            const label = isWhatsApp ? 'WhatsApp' : isLinkedIn ? 'LinkedIn' : isGitHub ? 'GitHub' : isMail ? href?.replace('mailto:', '') : null;
+
+                            // render as a pill button if it's a known platform or bare URL
+                            const isBarUrl = String(children) === href;
+                            return (
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex items-center gap-1 text-green-400 hover:text-green-300 font-medium transition"
+                              >
+                                <span>{icon}</span>
+                                <span className="underline underline-offset-2">{label ?? children}</span>
+                              </a>
+                            );
+                          },
                         }}
                       >
                         {normalizeText(msg.text)}
@@ -233,18 +247,18 @@ const Chatbot = () => {
             </div>}
 
             {/* Input */}
-            <div className="px-3 py-3 flex items-center gap-2" style={{ backgroundColor: '#111' }}>
+            <div className="p-3 flex items-center gap-2 w-full border-t border-gray-800" style={{ backgroundColor: '#111' }}>
               <input
                 value={input}
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={handleKey}
                 placeholder="Ask about Sriram..."
-                className="flex-1 bg-gray-800 text-white text-sm px-4 py-2.5 rounded-xl outline-none placeholder-gray-500 border border-gray-700 focus:border-green-500 transition"
+                className="min-w-0 flex-1 bg-gray-800 text-white text-sm px-3 py-3 rounded-xl outline-none placeholder-gray-500 border border-gray-700 focus:border-green-500 transition"
               />
               <button
                 onClick={sendMessage}
                 disabled={!input.trim() || loading}
-                className="w-10 h-10 rounded-xl bg-green-500 flex items-center justify-center text-black text-lg hover:bg-green-400 transition disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+                className="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center text-black text-lg hover:bg-green-400 transition disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
               >
                 <IoSend />
               </button>
